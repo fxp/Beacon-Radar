@@ -17,6 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions{
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -30,4 +37,6 @@ dependencies {
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
     testCompile 'junit:junit:4.12'
     compile files('libs/BRTSDK-5.0.7.jar')
+    // LeanCloud 基础包
+    compile ('cn.leancloud.android:avoscloud-sdk:v4.4.4')
 }
